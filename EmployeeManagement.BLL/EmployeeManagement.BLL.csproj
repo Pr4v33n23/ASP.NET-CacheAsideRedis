@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86639677-6CF4-4024-A9A5-EE0F5F1DC991}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmployeeManagement.BLL</RootNamespace>
+    <AssemblyName>EmployeeManagement.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EmployeeLogic.cs" />
+    <Compile Include="EmployeeModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeManagement.BLL.Interfaces\EmployeeManagement.BLL.Interfaces.csproj">
+      <Project>{2affbbcd-688a-4ddf-89d8-b5fdd2124608}</Project>
+      <Name>EmployeeManagement.BLL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.BOL\EmployeeManagement.BOL.csproj">
+      <Project>{ad5b08fc-0742-4b15-97ec-c000b2527764}</Project>
+      <Name>EmployeeManagement.BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.DAL.Interfaces\EmployeeManagement.DAL.Interfaces.csproj">
+      <Project>{494000ce-e997-4cc0-abdd-3ff76ae48690}</Project>
+      <Name>EmployeeManagement.DAL.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.DAL\EmployeeManagement.DAL.csproj">
+      <Project>{3b3c03ff-6a7a-4e16-a728-b9b7a706c167}</Project>
+      <Name>EmployeeManagement.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManagement.Entities\EmployeeManagement.Entities.csproj">
+      <Project>{f8383211-d9af-4928-a8f6-bb91c01d331c}</Project>
+      <Name>EmployeeManagement.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
